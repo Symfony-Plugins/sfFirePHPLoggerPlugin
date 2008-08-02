@@ -1,0 +1,39 @@
+This file is part of sfFirePHPLoggerPlugin.
+===========================================
+
+Description :
+=============
+The plugin allows you to log both symfony and custom events in the FireBug console, thanks to the FirePHP addon of FireBug and Firefox.
+
+Requirement :
+=============
+* Mozilla firefox ( http://www.getfirefox.com )
+* FireBug plugin  ( http://www.getfirebug.com )
+* FirePHP plugin  ( http://www.firephp.org )
+* symfony 1.1.*   ( http://www.symfony-project.org )
+
+Installation :
+==============
+
+Install this plugin as any symfony plugin.
+Once the sfFirePHPLogger folder was copied in your project pluggins directory, 
+browse to your apps and then in the config folder open the factories.yml file.
+Merge those lines to your file :
+
+    [yml]
+    dev:   
+      logger:   
+        class: sfAggregateLogger   
+        param:   
+        level: debug   
+        loggers:   
+          sf_FirePHP:   
+            class: sfFirePHPLogger   
+            param:   
+            level: debug   
+
+clear the symfony cache :   
+$path/to/your/project/symfony cc
+
+Activate the console in firebug for the page on which you want to use FirePHP.
+Let firebug refreshes your page. Voila !

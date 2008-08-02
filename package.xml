@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<package version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>sfFirePHPLoggerPlugin</name>
+ <channel>plugins.symfony-project.org</channel>
+ <summary>Log symfony events in the FireBug console.</summary>
+ <description>
+  The plugin allows you to log both symfony and custom events in the FireBug console, thanks to the FirePHP addon of FireBug and Firefox.
+ </description>
+ <lead>
+  <name>Thomas COURBON</name>
+  <user>tcourbon</user>
+  <email>thomas@cafeaumiel.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2008-08-02</date>
+ <time>14:30:00</time>
+ <version>
+  <release>0.4.1</release>
+  <api>0.4.0</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license>BSD License</license>
+ <notes>This version bring the pear package compatibility.</notes>
+ <contents>
+  <dir name="/">
+   <file role="data" name="README" />
+   <file role="data" name="LICENSE" />
+   <file role="data" name="CHANGELOG" />
+   <dir name="lib/">
+    <file role="php" name="sfFirePHPLogger.class.php" />
+    <dir name="FirePHPCore/">
+    <file role="php" name="fb.php" />
+     <file role="php" name="FirePHP.class.php" />
+     <file role="data" name="README" />
+     <file role="data" name="LICENSE" />
+     <file role="data" name="CHANGELOG" />
+    </dir>
+   </dir>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.0.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.1</min>
+   </pearinstaller>
+   <package>
+    <name>symfony</name>
+    <channel>pear.symfony-project.com</channel>
+    <min>1.1.0</min>
+    <max>1.2.0</max>
+    <exclude>1.2.0</exclude>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease/>
+ <changelog/>
+</package>
